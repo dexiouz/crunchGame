@@ -22,28 +22,27 @@
                              if (userInfo == " " || userInfo == "Name"){
                                         userInfo = "Player one";   
                              }else{
-                                    userInfo = userInfo;     
+                                    userInfo;     
                             }   
                             let welcomeMsg = alert(`${userInfo} WELCOME TO CRUNCHIE \n\n Correct the sentences and get 20 points each.\n If you fail you lose 10 points.\n I have medals for you too according to the points you make.\n N/B: Words are case sensitive.\n\n Goodluck! \n\n`)
                     }
 
 
                     //function to add or subtract points and display message
-                    function checkIf(ans,arr){                   
-                             if(ans === arr.join(" ")){      //if answer is the same
-                                result +=20;
-                                msg = (`CORRECT!!!   \n "${ans}"   \n` );
+                    function checkIf(ans, arr) {
+                            if (ans === arr.join(" ")) {      //if answer is the same
+                                result += 20;
+                                msg = (`CORRECT!!!   \n "${ans}"   \n`);
                                 // if answer is not the same
-                            }else if(ans == "your answer"){
-                                result -=10;
+                            } else if (ans == "your answer") {
+                                result -= 10;
                                 msg = (`NO ANSWER!!!`)
                             }
-                            else if(ans !== arr.join(" ")){
+                            else if (ans !== arr.join(" ")) {
                                 result -= 10;
-                                msg = (`WRONG ANSWER!!!   \n "${ans}"   \n` );
+                                msg = (`WRONG ANSWER!!!   \n "${ans}"   \n`);
                             }
-                                alert(`\n ${msg} \n You have ${result} points.\n\n`);
-                                
+                            alert(`\n ${msg} \n You have ${result} points.\n\n`);
                         }
 
 
@@ -189,18 +188,11 @@
                     //1 function that accepts player name 
                    
                    firstPrompt();
-            //        let i = (Math.floor(Math.random()*5)+1);
-            //   var    arrays = k[i].map(function (item){
-            //             return item;
-            //         })
-            //         console.log(array)
-                
-
                 //2 function uses corresponding 'player name' to welcome user
-                         nameInfo(name);
+                    nameInfo(name);
                
                    //3 function that accepts the array that contains all the sentences and for each sentence of the array it does "checkWord";
-                 arrays.forEach(checkWord);
+                    arrays.forEach(checkWord);
                 
      
                   //4 function that shows corresponding 'name of user' at the end of each game
